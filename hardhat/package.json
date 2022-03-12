@@ -1,0 +1,50 @@
+{
+  "dependencies": {
+    "base64-sol": "^1.1.0",
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.2",
+    "@openzeppelin/contracts": "^4.5.0",
+    "@openzeppelin/contracts-upgradeable": "^4.5.1",
+    "@typechain/ethers-v5": "^9.0.0",
+    "@typechain/hardhat": "^4.0.0",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^17.0.17",
+    "avalanche": "^3.12.0",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.0",
+    "ethers": "^5.5.4",
+    "hardhat": "^2.8.4",
+    "hardhat-gas-reporter": "^1.0.7",
+    "solidity-coverage": "^0.7.19",
+    "ts-node": "^10.5.0",
+    "typechain": "^7.0.0",
+    "yarn": "^1.22.17"
+  },
+  "scripts": {
+    "precompile": "rimraf ./build/",
+    "compile": "npx hardhat compile",
+    "console": "npx hardhat console",
+    "pretest": "yarn compile",
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.ts",
+    "erc20": "npx hardhat run scripts/erc20.ts",
+    "nft": "npx hardhat run scripts/nft.ts --network mainnet",
+    "storage": "npx hardhat run scripts/storage.ts",
+    "send-avax-wallet-signer": "npx hardhat run scripts/sendAvaxWalletSigner.ts",
+    "send-avax-json-provider": "npx hardhat run scripts/sendAvaxJSONProvider.ts",
+    "lint": "prettier ./test/**/*.ts --check",
+    "prepublishOnly": "yarn test",
+    "hardhat": "npx hardhat",
+    "accounts": "npx hardhat accounts",
+    "balances": "npx hardhat balances",
+    "fund-cchain-addresses": "npx hardhat run scripts/fund-cchain-addresses.js"
+  },
+  "engines": {
+    "node": ">=14.17.0"
+  }
+}
